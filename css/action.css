@@ -1,0 +1,77 @@
+/* 学校弹出整体设置 */
+#ld{
+    display: none;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 125px;
+    height: 380px;
+    width: 650px;
+    outline: none;
+    border: 2.5px solid;
+    border-color:#e0e0e0 ;
+    border-radius: 0 15px 15px 15px;
+    background-color: white;
+    box-shadow: 0em 0.4em 0.6em 0.1em rgba(0,0,0,0.3);
+}
+/* 省市和学校字体设置 */
+#ld li{
+    cursor: pointer;
+    display: block;
+    font-weight: normal;
+	width: 100px;
+	height: 70px;
+	font-size: 20px;
+	background: white;
+}
+/* 鼠标经过字体变粗 */
+#ld li:hover{
+    font-size: 24px;
+    font-weight:bolder;
+}
+/* 左侧省市样式设置 */
+#ld-left{
+    display: inline;
+	overflow-y: scroll;
+    overflow-x: hidden;
+    float: left;
+    text-align: center;
+    margin-top: 35px;
+    margin-left: 22px;
+	height: 343px;
+}
+#ld-left:hover{
+    font-weight:bolder;
+}
+/* 右侧学校样式设置 */
+#ld-right {
+    text-align: center;
+    margin-top: 35px;
+    margin-right: 30px;
+	float: right;
+	column-count: 2;
+}
+/* 学校样式字体 */
+#ld-right li{
+	width: 200px;
+	height: 70px;
+}
+/* 学校整体高度框架 */
+.list-contain {
+	height: 340px;
+    overflow-x: hidden;
+	overflow-y: scroll;
+}
+/* 省市学校弹出框样式设置 */
+.register #school.hover input {
+    margin-top: 65px;
+    border: 2.5px solid;
+    border-color:#e0e0e0 ;
+    border-bottom-color: white;
+    margin-left: 20px;
+    font-size: 22px;
+    width: 190px;
+    height: 63px;
+    background-color:white;
+    border-radius:15px 15px 0 0;
+    z-index: 1;
+}

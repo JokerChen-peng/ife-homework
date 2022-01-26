@@ -1,0 +1,500 @@
+/* 整体页面设置 */
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* 滚动槽 */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(187, 187, 187, 0.4);
+}
+element::-webkit-scrollbar {
+  display: none;
+}
+/* 头部样式 */
+.banner {
+  width: 100%;
+  min-width: 1200px;
+  height: 600px;
+  background: url(../image/background.jpg) no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  z-index: 1;
+}
+.title {
+  width: 780px;
+  color: #fff;
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  margin-left: -390px;
+}
+/* 顶部样式 */
+.top {
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.5);
+}
+/* 导航栏样式 */
+.nav {
+  float: right;
+  margin-right: 30px;
+}
+.nav > li {
+  float: left;
+}
+.nav > li:nth-last-child(n + 2) {
+  margin-right: 30px;
+}
+.nav > li > a {
+  color: #fff;
+  font-size: 18px;
+  line-height: 70px;
+  font-weight: 200;
+}
+.nav > li:last-child > a {
+  background: #676767;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.nav > li:nth-last-child(n + 2) > a {
+  padding: 10px 15px;
+}
+.nav > li:nth-last-child(n + 2) > a:hover {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.nav > li > a:active {
+  color: red;
+}
+/* 注册部分相关样式 */
+.register {
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 30%;
+  left: -430px;
+  top: -50px;
+  width: 875px;
+  height: 150px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+/* 学校、年份、电子邮箱提示字样式设置 */
+.register .head li {
+  display: block;
+  float: left;
+  line-height: 80px;
+  padding-left: 35px;
+  padding-right: 55px;
+  font-family: "microsoft yahei";
+  font-size: 20px;
+}
+/* 年份弹出框内年份设置 */
+.register .number_year li {
+  display: block;
+  float: left;
+  line-height: 80px;
+  padding-left: 35px;
+  padding-right: 55px;
+  font-family: "microsoft yahei";
+  font-size: 20px;
+}
+/* 电子邮箱提示字额外设置 */
+.register ul .li_email {
+  padding-left: 5px;
+}
+/* 报名按钮设置 */
+.register .finish {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 67px;
+  margin-left: 710px;
+  width: 145px;
+  height: 55px;
+  background-color: #2599ee;
+  border-radius: 30px;
+  color: white;
+  font-size: 20px;
+  line-height: 52px;
+}
+/* 报名输入框 */
+.register input {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  border: none;
+}
+/* 学校输入框 */
+.register #school input {
+  margin-top: 65px;
+  margin-left: 22px;
+  width: 190px;
+  height: 60px;
+  font-size: 22px;
+  background-color: #eee;
+  border-radius: 15px;
+}
+/* 年份输入框 */
+.register #date_year input {
+  margin-top: 65px;
+  margin-left: 235px;
+  font-size: 22px;
+  width: 175px;
+  height: 60px;
+  background-color: #eee;
+  border-radius: 15px;
+}
+/* 电子邮箱输入框 */
+.register .email input {
+  cursor: auto;
+  outline: none;
+  margin-top: 65px;
+  margin-left: 435px;
+  width: 250px;
+  height: 60px;
+  font-size: 22px;
+  background-color: #eee;
+  border-radius: 15px;
+}
+/* 年份弹出框样式 */
+.register .year li {
+  cursor: pointer;
+  line-height: 50px;
+  padding-top: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 22px;
+}
+/* 年份鼠标经过加粗 */
+.register .year li:hover {
+  font-size: 25px;
+  font-weight: bold;
+}
+/* 鼠标经过更改样式 */
+.register #date_year.hover input {
+  margin-top: 65px;
+  border: 2.5px solid;
+  border-color: #e0e0e0;
+  border-bottom-color: white;
+  margin-left: 235px;
+  font-size: 22px;
+  width: 175px;
+  height: 63px;
+  background-color: white;
+  border-radius: 15px 15px 0 0;
+  z-index: 1;
+}
+/* 年份弹出框设置 */
+.year {
+  display: none;
+  position: absolute;
+  margin-left: 235px;
+  margin-top: 125px;
+  height: 220px;
+  width: 440px;
+  border: 2.5px solid;
+  border-color: #e0e0e0;
+  font-size: 22px;
+  border-radius: 0 15px 15px 15px;
+  background-color: white;
+  box-shadow: 0em 0.4em 0.6em 0.1em rgba(0, 0, 0, 0.3);
+}
+
+/* 报名成功或失败时的弹窗设置 */
+.prompt {
+  display: none;
+  position: absolute;
+  text-align: center;
+  font-family: "microsoft yahei";
+  line-height: 50px;
+  font-size: 16px;
+  margin-left: 50%;
+  margin-top: 32%;
+  left: -430px;
+  top: -110px;
+  width: 875px;
+  height: 50px;
+  background-color: white;
+  border-radius: 20px;
+}
+/* 报名成功弹窗 */
+.prompt.right {
+  display: block;
+  background-color: #a2ff8c;
+}
+/* 报名失败弹窗 */
+.prompt.wrong {
+  display: block;
+  background-color: #ff969a;
+}
+/* 您已成功报名&重新报名设置 */
+.success {
+  display: none;
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 32%;
+  left: -430px;
+  top: -40px;
+  width: 875px;
+  height: 140px;
+  background-color: white;
+  border-radius: 15px;
+  font-size: 35px;
+  text-align: center;
+  font-family: "microsoft yahei";
+  line-height: 130px;
+  z-index: 1;
+}
+/* 返回报名 */
+.back {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  color: #b6b6b6;
+  font-family: "microsoft yahei";
+  margin-left: 50%;
+  left: 350px;
+  margin-top: 60px;
+  z-index: 1;
+}
+
+/* 宗旨部分 */
+/* 宗旨位置设置 */
+.purpose {
+  position: relative;
+  height: 350px;
+  width: 1000px;
+  margin-top: 200px;
+  margin-left: 50%;
+  left: -500px;
+  background-color: #fff;
+  z-index: -1;
+}
+/* 我们的宗旨标题 */
+.purpose .name {
+  text-align: left;
+  font-size: 40px;
+  margin-left: 15px;
+}
+/* 大小标题间距 */
+.purpose .goal {
+  float: left;
+  margin-top: 45px;
+  font-size: 20px;
+}
+/* 小标题设置 */
+.purpose .goal li {
+  text-align: left;
+  float: left;
+  height: 35px;
+  width: 210px;
+  padding: 0 19px;
+  font-size: 30px;
+}
+/* 宗旨图片设置 */
+.purpose .goal img {
+  float: left;
+  margin-left: 17px;
+  margin-top: 15px;
+  width: 232px;
+  height: 186px;
+}
+
+/* 课程整体样式设置 */
+.course {
+  position: relative;
+  font-family: "microsoft yahei";
+  height: 1400px;
+  width: 986px;
+  background-color: white;
+  margin-left: 50%;
+  left: -493px;
+  margin-top: 125px;
+}
+.course #db {
+  height: 1px;
+  width: 1px;
+  margin-top: -81px;
+}
+/* 课程安排字体&间距设置 */
+.course .plan {
+  text-align: center;
+  height: 80px;
+  font-size: 40px;
+}
+/* 四个筛选li样式设置 */
+.course .summary li {
+  float: right;
+  cursor: pointer;
+  text-align: center;
+  line-height: 20px;
+  padding: 0 20px;
+  height: 50px;
+  border-bottom: 2px solid #c1c1c1;
+  color: #c1c1c1;
+}
+/* 定义鼠标筛选项经过样式 */
+.course .summary li:hover {
+  border-bottom: 3px solid #000;
+  color: #000;
+  font-weight: 400px;
+  font-size: 20px;
+}
+
+/* 筛选时需要的设置 */
+.course .part.html {
+  display: block;
+}
+.course .part.CSS {
+  display: block;
+}
+.course .part.JavaScript {
+  display: block;
+}
+/* 课程总体样式设置 */
+.course .part {
+  display: block;
+  text-align: left;
+  height: 126px;
+  width: 900px;
+  padding: 40px;
+  background-color: white;
+}
+/* 课程图片设置 */
+.course .part img {
+  float: left;
+  margin-top: 25px;
+  height: 126px;
+  width: 126px;
+  background-color: #000;
+  border-radius: 63px;
+}
+/* 课程概要文字设置 */
+.course .part p {
+  display: block;
+  padding-left: 150px;
+  padding-top: 5px;
+}
+/* 课程标题样式设置 */
+.course .part h1 {
+  display: block;
+  padding-left: 150px;
+  padding-top: 30px;
+}
+/* 课程下方小标签设置 */
+.course .part div {
+  float: left;
+  margin-top: 10px;
+  margin-left: 25px;
+  width: 100px;
+  height: 20px;
+  text-align: center;
+  border-radius: 30px;
+  color: white;
+  font-size: 15px;
+  line-height: 20px;
+}
+/* 小标签颜色设置 */
+.course .part .label_HTML {
+  background-color: #a7beff;
+}
+.course .part .label_CSS {
+  background-color: #3a6837;
+}
+.course .part .label_JavaScript {
+  background-color: #335173;
+}
+
+/* footer设置 */
+.footer {
+  height: 300px;
+  width: 100%;
+  /* margin-top: 500px; */
+  background-color: #ddd;
+}
+/* 整体布局 */
+.footer .total {
+  position: relative;
+  margin-left: 50%;
+  left: -450px;
+  text-align: left;
+  height: 250px;
+  width: 900px;
+  padding-top: 40px;
+}
+/* IFE栏&link栏 */
+.footer .copyright {
+  float: left;
+}
+.footer .link {
+  float: right;
+}
+/* 样式设置 */
+.IFE {
+  float: left;
+  margin-right: 30px;
+  margin-top: 80px;
+  height: 60px;
+  width: 60px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 50px;
+  color: white;
+  background-color: #343434;
+}
+/* 整体位置 */
+.Links {
+  float: left;
+  margin-right: 30px;
+  margin-top: 10px;
+  height: 200px;
+  width: 120px;
+  font-size: 30px;
+  color: white;
+  font-size: 50px;
+}
+/* Link标题 */
+.Links dl {
+  font-weight: 400;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  color: #000;
+  text-align: left;
+}
+/* link中每个小字 */
+.Links dd {
+  padding: 3px 0;
+  font-weight: 100;
+  font-size: 12px;
+  color: #000;
+  text-align: left;
+}
